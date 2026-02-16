@@ -228,7 +228,7 @@ app.get("/api/properties/search", async (req, res) => {
 //      DEFAULT ROUTE
 // ======================================================
 app.get("/", (req, res) => {
-  res.send("Luxury Real Estate Platform Backend is Running...");
+  res.send("Estate hub Backend is Running...");
 });
 
 // ======================================================
