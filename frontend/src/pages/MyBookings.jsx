@@ -16,7 +16,7 @@ export default function MyBookings() {
     try {
       setLoading(true);
       const res = await fetch(
-        `http://localhost:5000/api/bookings?userEmail=${encodeURIComponent(
+        `${serverApi}/api/bookings?userEmail=${encodeURIComponent(
           user.email
         )}`
       );

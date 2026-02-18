@@ -9,7 +9,7 @@ export default function AuthProvider({ children }) {
 
   // API Base URL
   // const serverApi = "http://localhost:5000";
-  const serverApi = "https://estate-hub-backend-green.vercel.app/";
+  const serverApi = "https://estate-hub-backend-green.vercel.app";
 
   // ✅ Fetch user profile from DB
   // const { data: profile } = useQuery({
