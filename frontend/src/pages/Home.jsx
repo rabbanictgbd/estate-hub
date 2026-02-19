@@ -25,7 +25,7 @@ export default function Home() {
                 Join 
               </Link>
               }
-              <Link to="/search" className="btn btn-outline btn-primary">
+              <Link to="/properties" className="btn btn-outline btn-primary">
                 Search Property
               </Link>
             </div>

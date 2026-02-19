@@ -20,7 +20,7 @@ export default function PropertySearch() {
     try {
       setLoading(true);
       const url = queryParams
-        ? `http://localhost:5000/api/properties/search?${queryParams}`
+        ? `${serverApi}/api/properties/search?${queryParams}`
         : "http://localhost:5000/api/properties";
 
       const res = await fetch(url);
