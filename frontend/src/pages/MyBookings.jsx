@@ -2,7 +2,7 @@ import { useEffect, useState, useContext } from "react";
 import { AuthContext } from "../context/AuthProvider";
 
 export default function MyBookings() {
-  const { user } = useContext(AuthContext);
+  const { user, serverApi } = useContext(AuthContext);
   const [bookings, setBookings] = useState([]);
   const [loading, setLoading] = useState(true);
 

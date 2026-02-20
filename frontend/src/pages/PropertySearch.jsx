@@ -1,6 +1,10 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { AuthContext } from "../context/AuthProvider";
+
+
 
 export default function PropertySearch() {
+  const {serverApi}= useContext(AuthContext)
   const [filters, setFilters] = useState({
     title: "",
     location: "",
@@ -21,7 +25,7 @@ export default function PropertySearch() {
       setLoading(true);
       const url = queryParams
         ? `${serverApi}/api/properties/search?${queryParams}`
-        : "http://localhost:5000/api/properties";
+        : `${serverApi}/api/properties`;
 
       const res = await fetch(url);
       const data = await res.json();
