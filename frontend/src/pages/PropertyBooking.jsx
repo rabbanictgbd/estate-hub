@@ -6,7 +6,7 @@ import Swal from "sweetalert2";
 export default function PropertyBooking() {
   const { id } = useParams(); // property _id
   const navigate = useNavigate();
-  const { user } = useContext(AuthContext);
+  const { user, serverApi } = useContext(AuthContext);
 
   const [property, setProperty] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -15,7 +15,7 @@ export default function PropertyBooking() {
   useEffect(() => {
     const fetchProperty = async () => {
       try {
-        const res = await fetch(`http://localhost:5000/api/properties/${id}`);
+        const res = await fetch(`${serverApi}/api/properties/${id}`);
         const data = await res.json();
         setProperty(data);
         setLoading(false);
@@ -53,7 +53,7 @@ export default function PropertyBooking() {
       };
 
       try {
-        const res = await fetch("http://localhost:5000/api/bookings", {
+        const res = await fetch(`${serverApi}/api/bookings`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(bookingData),

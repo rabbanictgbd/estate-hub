@@ -5,7 +5,7 @@ import slugify from "slugify";
 import Swal from "sweetalert2";
 
 export default function PropertyEntry() {
-  const { user } = useContext(AuthContext);
+  const { user, serverApi } = useContext(AuthContext);
   const navigate = useNavigate();
   const imageHostKey = import.meta.env.VITE_IMGBB_API_KEY;
 
@@ -81,7 +81,7 @@ export default function PropertyEntry() {
     };
 
     // Save to backend
-    fetch("http://localhost:5000/api/properties", {
+    fetch(`${serverApi}/api/properties`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(propertyData),
