@@ -51,7 +51,7 @@ export default function Register() {
     e.preventDefault();
     setError("");
 
-    if (emailError) return; // stop if duplicate
+    if (emailError) return; // stop if duplicate happen
 
     const name = e.target.name.value;
     const password = e.target.password.value;
