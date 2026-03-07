@@ -22,7 +22,7 @@ export default function PropertyEntry() {
     image: null,
   });
 
-  // 🔹 Handle Change (Text Fields)
+  // Handle Change (Text Fields)
   const handleChange = (e) => {
   const { name, value, type } = e.target;
 
@@ -46,12 +46,12 @@ export default function PropertyEntry() {
 };
 
 
-  // 🔹 Image Handler
+  // Image Handler
   const handleImageChange = (e) => {
     setFormData({ ...formData, image: e.target.files[0] });
   };
 
-  // 🔹 Submit Handler
+  // Submit Handler
   const handleSubmit = async (e) => {
     e.preventDefault();
 
