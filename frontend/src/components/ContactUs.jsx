@@ -52,9 +52,9 @@ const ContactUs = () => {
               Have questions or need assistance? Reach out to us through this form
               or via the details below.
             </p>
-            <p><strong>📍 Address:</strong> Dhaka, Bangladesh</p>
-            <p><strong>📧 Email:</strong> support@bloodapp.com</p>
-            <p><strong>📞 Phone:</strong> +880 1234-567890</p>
+            <p><strong>📍 Address:</strong> South Manda, Mugda, Dhaka, Bangladesh</p>
+            <p><strong>📧 Email:</strong> rabbanictgbd@gmail.com</p>
+            <p><strong>📞 Phone:</strong> +880 1832-786121</p>
           </div>
 
           {/* Contact Form */}
