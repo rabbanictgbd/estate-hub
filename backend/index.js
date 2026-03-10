@@ -32,7 +32,7 @@ async function connectDB() {
     await client.connect();
 
     // Correct database name
-    db = client.db("luxury_real_estate_platform_db");
+    db = client.db("estate_hub_db");
 
     // Correct collections
     usersCollection = db.collection("users");
